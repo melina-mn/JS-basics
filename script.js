@@ -25,27 +25,30 @@ const melinaObject = {
     name: "Melina",
     expenses: [],
     income: [],
-    function addExpenses() {
+    addExpenses : function(){
         prompt(
-            'What was your expense? (rent/gas/food etc)'
-        ); 
-    }
+                    'What was your expense? (rent/gas/food etc)'
+                );
+        }
 }
-console.log(melinaObject);
 
-//2. WE NEED A FUNCTION FOR THE EXPENSES:
-//DON'T KNOW HOW TO WRITE IT:
+const expensesSave = prompt(
+    "What was your expense? (rent/gas/food/clothes etc)"
+)
+
+//2. WE NEED A FUNCTION MENU:
 
 function menu() {
     const questions = parseFloat(
         prompt(
-          'Please select a choice :\n 1. Add income\n 2. Add expense\n 3. List all expenses\n 4. Get summary'
+          "Please select a choice :\n 1. Add income\n 2. Add expense\n 3. List all expenses\n 4. Get summary"
         )
       );
 }
 
-//we shopuld call it out: 
+//we should call it out: 
 menu()
+
 
 // 3. ADD SWITCH:
 // switch (info) {
