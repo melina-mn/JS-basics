@@ -25,38 +25,50 @@ const melinaObject = {
     name: "Melina",
     expenses: [],
     income: [],
+    function addExpenses() {
+        prompt(
+            'What was your expense? (rent/gas/food etc)'
+        ); 
+    }
 }
 console.log(melinaObject);
 
+//2. WE NEED A FUNCTION FOR THE EXPENSES:
+//DON'T KNOW HOW TO WRITE IT:
 
-const info = prompt(
-    "Please select from the menu: \n1) Add Income\n2) Add Expences\n3) List All Expences\n4) Get Summery"
-);
+function menu() {
+    const questions = parseFloat(
+        prompt(
+          'Please select a choice :\n 1. Add income\n 2. Add expense\n 3. List all expenses\n 4. Get summary'
+        )
+      );
+}
 
+//we shopuld call it out: 
+menu()
 
-console.log(info);
-// 2. ADD SWITCH: DONE
-switch (info) {
-    case "1":
-      prompt(" Add Your Income");
+// 3. ADD SWITCH:
+// switch (info) {
+//     case "1":
+//       prompt(" Add Your Income");
       
-      break;
-    case "2":
-      prompt("Add Your Expenses");
+//       break;
+//     case "2":
+//       prompt("Add Your Expenses");
       
-      break;
-    case "3":
-        prompt("What was your expense? (rent/gas/food etc)");
+//       break;
+//     case "3":
+//         prompt("What was your expense? (rent/gas/food etc)");
       
-      break;
-    case "4":
-        prompt("Get Summary");
-      // Don't know how to store the answers!!!
-      break;
-    default:
-        prompt("Invalid selection");
-      break;
-  }
+//       break;
+//     case "4":
+//         prompt("Get Summary");
+//       // Don't know how to store the answers!!!
+//       break;
+//     default:
+//         prompt("Invalid selection");
+//       break;
+//   }
 
 
 //this was working but then I changed it to switch:
@@ -67,19 +79,4 @@ switch (info) {
 //     }; 
 
 
-//3. WE NEED A FUNCTION FOR THE EXPENSES:
-//DON'T KNOW HOW TO WRITE IT:
 
-// function menu() {
-//     const choice = parseFloat(
-//         //NOTE TO MYSELF: parseFloat() The parseFloat() 
-//         //function parses a string argument and returns a floating point number.
-//         prompt(
-           
-//         )
-//     );
-//     console.log("choice: " + choice);
-// }
-
-// //we shopuld call it out: 
-// menu()
