@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 // THE ACCOUNT OBJECT SHOULD HAVE THE FOLLWOING PROPERTIES:
 // name: the account holders name, should be a string
 // expenses: an array that should hold all of your expenses, can be empty from start
@@ -33,33 +27,83 @@
 function menu() {
   const questions = parseFloat(
       prompt(
-        "Please select a choice :\n 1. Add income\n 2. Add expense\n 3. List all expenses\n 4. Get summary"
+        "Please select a choice :\n1.Add income\n2.Add expense\n3.List all expenses\n4. Get summary"
       )
     );
-}
+
+} 
+
+    //we should call it out: 
+    menu()
 
 
-//we should call it out: 
-menu()
+  // 2. CREATE AN OBJECT FOR YOUR WEBSITE THAT HOLDS (NAME, EXPENSES, INCOME, ADDEXPENSES,ADDINCOME, LISTALLEXPENSES, AND A SUMMERY)
+  const melinaObject = {
+    name: "Melina",
+    expenses:["gas", "food", "rent", "clothes"],
+    income: [],
+    summary: getSummary()
+  }
 
-// 2. CREATE AN OBJECT FOR YOUR WEBSITE THAT HOLDS (NAME, EXPENSES, INCOME, ADDEXPENSES,ADDINCOME, LISTALLEXPENSES, AND A SUMMERY)
-const melinaObject = {
-  name: "Melina",
-  expenses:["gas", "food", "rent", "clothes"],
-  income: [],
-}
+function getSummary() {
+    alert(`your income is ${melinaObject.income}your total expenses ${melinaObject.expenses}     `);
+      return menu();
+    };
+    getSummary()
 
+  // let answer = '';
+  // if (answer === '1') {
+  //   const income = parseFloat(prompt(
+  //     'How much is your income?'
+  //     ));
+  // } else if (answer === '2'){
+  //   const expenses = parseFloat(prompt(
+  //     'Add your expenses'
+  //   ));
+  // } else if (answer === '3'){
+  //   let expensesSave = parseFloat(prompt(
+  //     'What was your expense? (\nrent\ngas\nfood\nclothes)'
+  //   ));
+  // }
+
+
+
+function incomeChoice(){
 const income = parseFloat(prompt(
   "How much is your income?"
   ));
-
+  return(menu());
+};
+incomeChoice();
+function expensesChoice(){
 const expenses = parseFloat(prompt(
   "Add your expenses"
 ));
-
+return(menu());
+};
+expensesChoice();
+function expensesSaveChoice(){
 let expensesSave = parseFloat(prompt(
   "What was your expense? (\nrent\ngas\nfood\nclothes)"
 ));
-alert(summery) 
+return(menu());
+};
+expensesSaveChoice();
+getSummary()
+
+
+//  switch (choice) {
+//   case 1:
+//     incomeChoice();
+//     break;
+//   case 2:
+//     expensesChoice();
+//     break;
+//     case 3: 
+//     expensesSaveChoice();
+//   default:
+//     menu();
+//     break;
+// }
 
 
