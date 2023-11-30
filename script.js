@@ -46,10 +46,8 @@ function menu() {
   }
 
 function getSummary() {
-    alert(`your income is ${melinaObject.income}your total expenses ${melinaObject.expenses}     `);
-      return menu();
+    alert(`your income is ${melinaObject.income}your total expenses ${melinaObject.expenses}`);
     };
-    getSummary()
 
   // let answer = '';
   // if (answer === '1') {
