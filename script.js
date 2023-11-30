@@ -42,12 +42,12 @@ function menu() {
     name: "Melina",
     expenses:["gas", "food", "rent", "clothes"],
     income: [],
-    summary: getSummary()
+    // summary: getSummary()
   }
 
-function getSummary() {
-    alert(`your income is ${melinaObject.income}your total expenses ${melinaObject.expenses}`);
-    };
+// function getSummary() {
+//     alert(`your income is ${melinaObject.income}your total expenses ${melinaObject.expenses}`);
+//     };
 
   // let answer = '';
   // if (answer === '1') {
@@ -87,7 +87,7 @@ let expensesSave = parseFloat(prompt(
 return(menu());
 };
 expensesSaveChoice();
-getSummary()
+// getSummary()
 
 
 //  switch (choice) {
