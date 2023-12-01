@@ -131,17 +131,3 @@ function expensesSaveChoice() {
 }
 expensesSaveChoice(); */
 // getSummary()
-
-//  switch (choice) {
-//   case 1:
-//     incomeChoice();
-//     break;
-//   case 2:
-//     expensesChoice();
-//     break;
-//     case 3:
-//     expensesSaveChoice();
-//   default:
-//     menu();
-//     break;
-// }
