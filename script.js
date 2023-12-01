@@ -43,6 +43,8 @@ const account = {
       'What was your expense? (\nrent\ngas\nfood\nclothes)'
     );
 
+    
+    // !!!ERROR!!
     this.expenses.push({
       expenses: expensesAmount,
       listAllExpenses: category,
@@ -54,6 +56,8 @@ const account = {
   
     const amount = parseFloat(prompt("How much is your income?"));
     
+
+    // !!!ERROR!!!
     this.incomes.push({ 
       incomeCategory: category,
       incomeAmount: amount 
