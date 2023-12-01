@@ -20,9 +20,9 @@
 
 // TO DO LIST:
 
-//1. WE NEED A FUNCTION MENU:
 
-// 2. CREATE AN OBJECT FOR YOUR WEBSITE THAT HOLDS (NAME, EXPENSES, INCOME, ADDEXPENSES,ADDINCOME, LISTALLEXPENSES, AND A SUMMERY)
+
+// 1. CREATE AN OBJECT FOR YOUR WEBSITE THAT HOLDS (NAME, EXPENSES, INCOME, ADDEXPENSES,ADDINCOME, LISTALLEXPENSES, AND A SUMMERY)
 const account = {
   name: "Melina",
   //expenses: ["gas", "food", "rent", "clothes"],
@@ -37,13 +37,27 @@ const account = {
     menu();
   },
 
- 
+
+  listAllExpenses: function () {
+    const category = prompt(
+      'What was your expense? (\nrent\ngas\nfood\nclothes)'
+    );
+
+    this.expenses.push({
+      expenses: expensesAmount,
+      listAllExpenses: category,
+    })
+     menu();
+  },
 
   addIncome: function () {
   
     const amount = parseFloat(prompt("How much is your income?"));
-
-    this.incomes.push({ incomeCategory: 'category', incomeAmount: 'amount' });
+    
+    this.incomes.push({ 
+      incomeCategory: category,
+      incomeAmount: amount 
+    });
     // now we save as an object with two properties: category and amount
 
     // 1. handle error so that a user cant leave the input empty
@@ -53,28 +67,21 @@ const account = {
     menu();
   },
 
-
-  listAllExpenses: function () {
-    const category = prompt(
-      'What was your expense? (\nrent\ngas\nfood\nclothes)'
-    );
-
-    this.expenses.push({expenses: 'expensesAmount', listAllExpenses: 'category'})
-     menu();
-  },
-
- 
   summary: function () {},
   // summary: getSummary()
 };
 
+//2. WE NEED A FUNCTION MENU:
 function menu() {
   const choice = parseFloat(
     prompt(
       "Please select a choice :\n1.Add income\n2.Add expense\n3.List all expenses\n4. Get summary"
     )
   );
+    
 
+
+  // if/else STATEMENT:
   if (choice === 1) {
     account.addIncome();
   } else if (choice === 2) {
@@ -85,7 +92,7 @@ function menu() {
 }
 
 //we should call it out:
-menu();
+    menu();
 
 // function getSummary() {
 //     alert(`your income is ${melinaObject.income}your total expenses ${melinaObject.expenses}`);
