@@ -29,7 +29,6 @@ const account = {
   expenses: [],
   // [{category: "gas", amount: 1000}, {category: "food", amount: 500}]
   incomes: [],
-
   // addExpenses: FUNCTION AND ... .push, SO THAT IT WILL ADD AN ARRAY TO EXPENSES
   addExpense: function () {
     const expensesAmount = parseFloat(prompt('How much is your expenses'));
@@ -37,18 +36,16 @@ const account = {
     menu();
   },
 
-
   listAllExpenses: function () {
     const category = prompt(
       'What was your expense? (\nrent\ngas\nfood\nclothes)'
     );
 
-    
-    // !!!ERROR!!
+
     this.expenses.push({
-      expenses: expensesAmount,
-      listAllExpenses: category,
-    })
+      expenses: category,
+    });
+    console.log(account.expenses);
      menu();
   },
 
@@ -57,11 +54,10 @@ const account = {
     const amount = parseFloat(prompt("How much is your income?"));
     
 
-    // !!!ERROR!!!
-    this.incomes.push({ 
-      incomeCategory: category,
-      incomeAmount: amount 
-    });
+   this.incomes.push({
+      incomes: amount,
+  });
+  console.log(account.incomes);
     // now we save as an object with two properties: category and amount
 
     // 1. handle error so that a user cant leave the input empty
@@ -71,8 +67,13 @@ const account = {
     menu();
   },
 
-  summary: function () {},
-  // summary: getSummary()
+
+  // when we have answered all the questions we store it by using the code alert and the ${} template string:
+  summary: function () {
+    alert(`Your incomes: ${account.amount}
+    Amount of expenses: ${account.expensesAmount}
+    Your expenses: ${account.category}`)
+  },
 };
 
 //2. WE NEED A FUNCTION MENU:
@@ -92,6 +93,11 @@ function menu() {
     account.addExpense();
   } else if (choice === 3) {
     account.listAllExpenses();
+  } else if (choice === 4) {
+    account.summary();
+  } else if (choice < 0 && choice > 4 && choice != Number){
+    alert('Unvalid answer, choose a number between 1 to 4 please!');
+    menu();
   }
 }
 
@@ -135,3 +141,17 @@ function expensesSaveChoice() {
 }
 expensesSaveChoice(); */
 // getSummary()
+
+
+/*
+
+  for (let i = amount; i < account.incomes; i++ ) {
+  
+    const incomes = account.addIncome[i];
+  }
+  account.incomes.push({
+    incomeCategory: category,
+    incomeAmount: amount
+    })
+  console.log(account.incomes);
+*/
