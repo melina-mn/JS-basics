@@ -62,9 +62,9 @@ const account = {
 
   // when we have answered all the questions we store it by using the code alert and the ${} template string:
   summary: function () {
-    alert(`Total balances: ${account.amount}
-    Total Incomes: ${account.expensesAmount}
-    Total expenses: ${account.category}`)
+    alert(`Total balances: ${account.}
+    Total Incomes: ${account.}
+    Total expenses: ${account.}`)
   },
 };
 
