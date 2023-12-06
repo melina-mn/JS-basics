@@ -61,13 +61,14 @@ const account = {
 
 
   // when we have answered all the questions we store it by using the code alert and the ${} template string:
+  /*
   summary: function () {
     alert(`Total balances: ${account.}
     Total Incomes: ${account.}
     Total expenses: ${account.}`)
   },
 };
-
+*/
 //2. WE NEED A FUNCTION MENU:
 function menu() {
   const choice = parseFloat(
