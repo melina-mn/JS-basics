@@ -61,13 +61,7 @@ const account = {
 
   // when we have answered all the questions we store it by using the code alert and the ${} template string:
   summary: function () {
-  
-  // for (let i = 0; i < expenses.length; i++ ) {
-  //     let value = expenses[i].amount + expenses[i].amount;
-  //     console.log(value);
-  // }
-
-  alert(`Your incomes: ${account.amount}
+    alert(`Your incomes: ${account.amount}
     Amount of expenses: ${account.expensesAmount}
     Your expenses: ${account.category}`)
   },
