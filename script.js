@@ -31,46 +31,43 @@ const account = {
   incomes: [],
   // addExpenses: FUNCTION AND ... .push, SO THAT IT WILL ADD AN ARRAY TO EXPENSES
   addExpense: function () {
-    const expensesAmount = parseFloat(prompt('How much is your expenses'));
-
-    menu();
-  },
-
-  listAllExpenses: function () {
     const category = prompt(
-      'What was your expense? (\nrent\ngas\nfood\nclothes)'
+      "What was your expense? (\nrent\ngas\nfood\nclothes)"
     );
-
-
-    this.expenses.push({
-      expenses: category,
-    });
-    console.log(account.expenses);
-     menu();
-  },
-
-  addIncome: function () {
-  
     const amount = parseFloat(prompt("How much is your income?"));
-    
-
-   this.incomes.push({
-      incomes: amount,
-  });
-  console.log(account.incomes);
-    // now we save as an object with two properties: category and amount
-
-    // 1. handle error so that a user cant leave the input empty
-    // 2. do the same thing in addExpenses as we did in addIncomes
-    // 3. addExpense to the menu
-
+    this.expenses.push({ expensesCategory: category, expenseAmount: amount });
+    // const expensesAmount = parseFloat(prompt("How much is your expenses"));
+    // console.log(this.expenses);
     menu();
   },
+  addIncome: function () {
+    const amount = parseFloat(prompt("How much is your income?"));
+    this.incomes.push({
+      income: amount,
+    });
+    menu();
+  },
+  listAllExpenses: function () {
+    for(let i = 0; i < this.expenses.length; i++){
+    let value = expenses[i].category + incomes [i].amount;
+        console.log(value);
+    };
+     
+    menu();
+  },
+
+
 
 
   // when we have answered all the questions we store it by using the code alert and the ${} template string:
   summary: function () {
-    alert(`Your incomes: ${account.amount}
+  
+  // for (let i = 0; i < expenses.length; i++ ) {
+  //     let value = expenses[i].amount + expenses[i].amount;
+  //     console.log(value);
+  // }
+
+  alert(`Your incomes: ${account.amount}
     Amount of expenses: ${account.expensesAmount}
     Your expenses: ${account.category}`)
   },
