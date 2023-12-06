@@ -49,7 +49,8 @@ const account = {
   },
   listAllExpenses: function () {
     for(let i = 0; i < this.expenses.length; i++){
-    let value = expenses[i].category + incomes [i].amount;
+    let value = expenses[i].category +
+    incomes[i].amount;
         console.log(value);
     };
      
