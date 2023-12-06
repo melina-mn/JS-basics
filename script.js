@@ -67,8 +67,9 @@ const account = {
     Total Incomes: ${account.}
     Total expenses: ${account.}`)
   },
+  */
 };
-*/
+
 //2. WE NEED A FUNCTION MENU:
 function menu() {
   const choice = parseFloat(
