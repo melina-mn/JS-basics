@@ -24,7 +24,7 @@
 
 // 1. CREATE AN OBJECT FOR YOUR WEBSITE THAT HOLDS (NAME, EXPENSES, INCOME, ADDEXPENSES,ADDINCOME, LISTALLEXPENSES, AND A SUMMERY)
 const account = {
-  name: "Melina",
+  name: 'Melina',
   //expenses: ["gas", "food", "rent", "clothes"],
   expenses: [],
   // [{category: "gas", amount: 1000}, {category: "food", amount: 500}]
@@ -32,19 +32,22 @@ const account = {
   // addExpenses: FUNCTION AND ... .push, SO THAT IT WILL ADD AN ARRAY TO EXPENSES
   addExpense: function () {
     const category = prompt(
-      "What was your expense? (\nrent\ngas\nfood\nclothes)"
+      'What was your expense? (\nrent\ngas\nfood\nclothes)'
     );
 
-    const amount = parseFloat(prompt("How much is your income?"));
+    const amount = parseFloat(prompt('How much is your income?'));
 
-    this.expenses.push({ expensesCategory: category, expenseAmount: amount });
+    this.expenses.push({ 
+      expensesCategory: category, 
+      expenseAmount: amount 
+    });
 
     // const expensesAmount = parseFloat(prompt("How much is your expenses"));
     // console.log(this.expenses);
     menu();
   },
   addIncome: function () {
-    const amount = parseFloat(prompt("How much is your income?"));
+    const amount = parseFloat(prompt('How much is your income?'));
 
     this.incomes.push({
       incomesAmount: amount,
@@ -57,7 +60,7 @@ const account = {
     // 3. each expense should be shown on one row with the category and amount
     // 4. we want the list shows in an alert
 
-    let message = "";
+    let message = '';
     // we need to declare message here so we can pass that to the alert
 
     this.expenses.forEach(function (expense) {
@@ -99,15 +102,10 @@ Expense amount: ${expense.expenseAmount}\n`;
 
     // 5. then we need to create a new variable to store the result of totalIncomes - totalExpenses
     let result = totalIncomes - totalExpenses;
+    // 6. once that is done you can show the result to the user for example in an alert
     alert(`Your Total Incomes: ${totalIncomes}
 Your Total Expenses: ${totalExpenses}
-Result: ${result}`);
-
-    
-  
-   
-    // 6. once that is done you can show the result to the user for example in an alert
-    
+Result: ${result}`);   
 }
 };
 
@@ -129,7 +127,7 @@ function menu() {
   } else if (choice === 4) {
     account.summary();
   } else if (choice < 0 && choice > 4 && choice != Number) {
-    alert("Unvalid answer, choose a number between 1 to 4 please!");
+    alert('Unvalid answer, choose a number between 1 to 4 please!');
     menu();
   }
 }
